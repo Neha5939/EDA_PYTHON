@@ -1,0 +1,26 @@
+AND(0, 0) -> Output: 0, Execution Time: 0.0000005000 sec
+AND(0, 1) -> Output: 0, Execution Time: 0.0000005000 sec
+AND(1, 0) -> Output: 0, Execution Time: 0.0000005000 sec
+AND(1, 1) -> Output: 1, Execution Time: 0.0000006000 sec
+OR(0, 0) -> Output: 0, Execution Time: 0.0000008000 sec
+OR(0, 1) -> Output: 1, Execution Time: 0.0000006000 sec
+OR(1, 0) -> Output: 1, Execution Time: 0.0000006000 sec
+OR(1, 1) -> Output: 1, Execution Time: 0.0000006000 sec
+NOT(0) -> Output: 1, Execution Time: 0.0000008000 sec
+NOT(1) -> Output: 0, Execution Time: 0.0000020000 sec
+NAND(0, 0) -> Output: 1, Execution Time: 0.0000016000 sec
+NAND(0, 1) -> Output: 1, Execution Time: 0.0000009000 sec
+NAND(1, 0) -> Output: 1, Execution Time: 0.0000010000 sec
+NAND(1, 1) -> Output: 0, Execution Time: 0.0000014000 sec
+NOR(0, 0) -> Output: 1, Execution Time: 0.0000017000 sec
+NOR(0, 1) -> Output: 0, Execution Time: 0.0000015000 sec
+NOR(1, 0) -> Output: 0, Execution Time: 0.0000014000 sec
+NOR(1, 1) -> Output: 0, Execution Time: 0.0000010000 sec
+XOR(0, 0) -> Output: 0, Execution Time: 0.0000008000 sec
+XOR(0, 1) -> Output: 1, Execution Time: 0.0000006000 sec
+XOR(1, 0) -> Output: 1, Execution Time: 0.0000007000 sec
+XOR(1, 1) -> Output: 0, Execution Time: 0.0000008000 sec
+XNOR(0, 0) -> Output: 1, Execution Time: 0.0000012000 sec
+XNOR(0, 1) -> Output: 0, Execution Time: 0.0000009000 sec
+XNOR(1, 0) -> Output: 0, Execution Time: 0.0000013000 sec
+XNOR(1, 1) -> Output: 1, Execution Time: 0.0000007000 sec
