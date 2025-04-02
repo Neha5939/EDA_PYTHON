@@ -1,15 +1,15 @@
 from myhdl import *
-def AND_Gate(a,b,c):
+def Nor_Gate(a,b,c):
     @always_comb
     def logic():
-        c.next=a | b
+        c.next= not(a | b)
     return logic
 
 #simulation
-def simulate_and_gate():
+def simulate_nor_gate():
     a,b,c=[Signal(bool(0)) for _ in range(3)]
     def bench():
-        or_inst=AND_Gate(a,b,c)
+        nor_inst=Nor_Gate(a,b,c)
         @instance
         def stimulus():
             print("a b | c")
@@ -19,13 +19,13 @@ def simulate_and_gate():
                     a.next, b.next=i,j
                     yield delay(10)
                     print(f'{int(a)} {int(b)} | {int(c)}')
-        return or_inst,stimulus
+        return nor_inst,stimulus
     #generate vcd
     tb=traceSignals(bench)
     sim=Simulation(tb)
     sim.run()
-    print("VCD file generated as 'and_gate.vcd.")
+    print("VCD file generated as bench.vcd ")
 #run
 def test():
-    simulate_and_gate()
+    simulate_nor_gate()
 test()

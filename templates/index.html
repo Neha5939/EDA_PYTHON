@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Adder Simulator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
+        th { background-color: #f4f4f4; }
+        .vcd-link { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Full Adder Simulation (All 8 Cases)</h1>
+    <table>
+        <tr>
+            <th>A</th> <th>B</th> <th>C</th> <th>Sum</th> <th>Carry</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.a }}</td>
+            <td>{{ result.b }}</td>
+            <td>{{ result.c }}</td>
+            <td>{{ result.sum }}</td>
+            <td>{{ result.carry }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% if vcd_available %}
+    <div class="vcd-link">
+        <p><a href="/download_vcd">Download VCD File</a></p>
+    </div>
+    {% endif %}
+</body>
+</html>

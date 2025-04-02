@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simulation Result</title>
+</head>
+<body>
+    <h1>{{ gate_name }} Simulation Completed</h1>
+    <p>Log File: <a href="{{ log_file }}">{{ log_file }}</a></p>
+    <p>VCD File: <a href="{{ url_for('open_gtkwave', vcd_file=vcd_file) }}">Open in GTKWave</a></p>
+</body>
+</html>
